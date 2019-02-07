@@ -1,0 +1,54 @@
+{
+  "name": "@shelf/quotation-marks-regex",
+  "version": "0.0.0",
+  "description": "Regular expression for matching quotation marks",
+  "license": "MIT",
+  "repository": "shelfio/quotation-marks-regex",
+  "author": {
+    "name": "Vlad Holubiev",
+    "email": "vlad@shelf.io",
+    "url": "shelf.io"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "coverage": "jest --coverage",
+    "lint": "eslint . --fix",
+    "test": "jest index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "src/index.js",
+  "keywords": [],
+  "devDependencies": {
+    "@shelf/eslint-config": "0.0.8",
+    "eslint": "5.12.1",
+    "husky": "1.3.1",
+    "jest": "24.0.0",
+    "lint-staged": "8.1.1",
+    "prettier": "1.16.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
