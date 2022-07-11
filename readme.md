@@ -20,6 +20,17 @@ const output = input.replace(new RegExp(regex, 'g'), '');
 // => hello hello hello hello hello hello hello hello hello hello hello
 ```
 
+
+## Publish
+
+```sh
+$ git checkout master
+$ yarn version
+$ yarn publish
+$ git push origin master --tags
+```
+
+
 ## License
 
 MIT © [Shelf](https://shelf.io)
